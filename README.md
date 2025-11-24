@@ -17,8 +17,19 @@ int _printf(const char *format, ...);
 
 -- Requirements --
 
-GCC compiler with flags: -Wall -Werror -Wextra -pedantic -std=gnu89
-Betty style 
+Ubuntu 20.04 LTS
+
+GCC with the flags:
+	-Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format
+
+No global variables
+
+At most 5 functions per file
+
+Betty style compliance
+
+Header file main.h must contain all prototypes
+
 
 
 -- Features --
@@ -36,9 +47,9 @@ And prints characters, strings and integers.
 README.md - This file
 _printf.c - primary function for the parsing
 main.h - Header file
-functions.c - The print functions (%c for char, %sfor string, %% for percent)
-print_numbers.c - The print functions (%d for int, %i for type long)
-Man_3_printf - Man page of _print
+functions.c - The print functions (%c for char, %s for string, %% for percent)
+print_numbers.c - The print functions (%d, %i for int)
+man_3_printf - Man page of _printf
 
 
 -- Compilation --
@@ -98,6 +109,13 @@ int main(void)
 -- Return Value --
 
 The function returns the number of characters printed (excluding the null byte).
+
+
+
+-- Example Usage --
+_printf("Hello %s!\n", "world");
+_printf("Number: %d\n", 42);
+_printf("Percent: %%\n");
 
 
 -- Authors --
