@@ -5,7 +5,9 @@ C - printf | Holberton School
 
 -- Global description --
 
-This project is a customised creation of the printf function from the standard C library. It handles the conversion of formatted outputs and printing to stdout.
+This project involves recreating the printf function from the standard C language library.
+Understand how printf works internally: analyse a formatting string, handle different conversions (such as %d, %s, %c, etc.) and display the result on the screen.
+It manages the conversion of formatted outputs and printing to stdout.
 
 
 -- The prototype --
@@ -32,9 +34,11 @@ And prints characters, strings and integers.
 -- Files --
 
 README.md - This file
+_printf.c - primary function for the parsing
 main.h - Header file
-functions.c - the print functions (char, string, percent)
-man_3_printf - Man page
+functions.c - The print functions (%c for char, %sfor string, %% for percent)
+print_numbers.c - The print functions (%d for int, %i for type long)
+Man_3_printf - Man page of _print
 
 
 -- Compilation --
@@ -98,6 +102,5 @@ The function returns the number of characters printed (excluding the null byte).
 
 -- Authors --
 
-AlexandreG83
-adib-commits
+AlexandreG83 | adib-commits
 
