@@ -1,17 +1,26 @@
 -- Project --
+
 C - printf | Holberton School
 
+
 -- Global description --
+
 This project is a customised creation of the printf function from the standard C library. It handles the conversion of formatted outputs and printing to stdout.
 
+
 -- The prototype --
+
 int _printf(const char *format, ...);
 
+
 -- Requirements --
+
 GCC compiler with flags: -Wall -Werror -Wextra -pedantic -std=gnu89
 Betty style 
 
+
 -- Features --
+
 %c - Character
 %s - String
 %% - Percent sign
@@ -19,7 +28,9 @@ Betty style
 %i - Integer
 And prints characters, strings and integers.
 
+
 -- Files --
+
 README.md - This file
 main.h - Header file
 functions.c - the print functions (char, string, percent)
@@ -27,10 +38,13 @@ man_3_printf - Man page
 
 
 -- Compilation --
+
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
 
 
+
 -- Main file --
+
 #include <limits.h>
 #include <stdio.h>
 #include "main.h"
@@ -76,10 +90,14 @@ int main(void)
     return (0);
 }
 
+
 -- Return Value --
+
 The function returns the number of characters printed (excluding the null byte).
 
+
 -- Authors --
+
 AlexandreG83
 adib-commits
 
