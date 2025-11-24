@@ -1,0 +1,17 @@
+.TH _PRINTF 3 "2025" "Holberton School"
+
+.SH NAME
+_printf \- custom implementation of printf
+
+.SH SYNOPSIS
+int _printf(const char *format, ...);
+
+.SH DESCRIPTION
+_printf prints output to stdout according to a format string.
+Only %c, %s, %%, %d and %i are supported.
+
+.SH RETURN VALUE
+Returns the number of characters printed, or -1 on error (limits).
+
+.SH SEE ALSO
+printf(3)
