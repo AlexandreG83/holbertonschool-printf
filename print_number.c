@@ -1,5 +1,11 @@
 #include <stdio.h>
 
+/**
+ * print_number - function that help to print an integer
+ * @n: integer to print
+ *
+ * Return: number of characters printed
+ */
 int print_number(int n)
 {
 int count = 0;
