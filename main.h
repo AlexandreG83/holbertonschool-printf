@@ -7,7 +7,24 @@
 
 int _printf(const char *format, ...);
 
-int _putchar(char c)
+int _putchar(char c);
+int print_char(va_list args);
+int print_string(va_list args);
+int print_percent(va_list args);
+int print_int(va_list args);
 int print_number(int n);
+
+/**
+ * struct format_specifier - Structure for format specifiers
+ * @spec: The format specifier character
+ * @func: The function pointer to handle the specifier
+ */
+typedef struct format_specifier
+{
+	char spec;
+	int (*func)(va_list);
+}
+format_t;
+
 
 #endif
