@@ -5,6 +5,9 @@ _printf \- custom implementation of printf
 
 .SH SYNOPSIS
 int _printf(const char *format, ...);
++#include <stdarg.h>
++#include <unistd.h>
++#include <stdlib.h>
 
 .SH DESCRIPTION
 _printf prints output to stdout according to a format string.
@@ -13,5 +16,8 @@ Only %c, %s, %%, %d and %i are supported.
 .SH RETURN VALUE
 Returns the number of characters printed, or -1 on error (limits).
 
-.SH SEE ALSO
-printf(3)
+.SH DATE
+11/09/2001
+
+.SH AUTHORS
+Alexandre GUILLAMON - ADIB HIDAOUI
