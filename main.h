@@ -13,6 +13,7 @@ int print_string(va_list args);
 int print_percent(va_list args);
 int print_int(va_list args);
 int print_number(int n);
+int print_binary(va_list args);
 
 /**
  * struct format_specifier - Structure for format specifiers
