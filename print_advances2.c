@@ -8,36 +8,43 @@
  */
 int print_pointer(va_list args)
 {
-	void *ptr = va_arg(args, void *);
-	unsigned long int address = (unsigned long int)ptr;
-	unsigned long int hex[32];
-	int i = 0, count = 0;
-	char *base = "0123456789abcdef";
+    void *ptr = va_arg(args, void *);
+    int count = 0;
+    char *nil = "(nil)";
+    unsigned long addr;
+    char hex[16];
+    int i, j;
+    char *base = "0123456789abcdef";
 
-	count += _putchar('0');
-	count += _putchar('x');
+    if (ptr == NULL)
+    {
+        for (i = 0; nil[i] != '\0'; i++)
+        {
+            _putchar(nil[i]);
+            count++;
+        }
+        return count;
+    }
 
-	if (address == 0)
-		return (count + _putchar('0'));
-	if (ptr == NULL)
-	  {
-	    return(_printf("%p", ptr));
-	    return (5);
-	  }
-	while (address > 0)
-	{
-		hex[i] = address % 16;
-		address /= 16;
-		i++;
-	}
+    addr = (unsigned long)ptr;
+    i = 0;
 
-	i--;
-	while (i >= 0)
-	{
-		_putchar(base[hex[i]]);
-		count++;
-		i--;
-	}
+    while (addr > 0)
+    {
+        hex[i] = base[addr % 16];
+        addr /= 16;
+        i++;
+    }
 
-	return (count);
+    _putchar('0');
+    _putchar('x');
+    count += 2;
+
+    for (j = i - 1; j >= 0; j--)
+    {
+        _putchar(hex[j]);
+        count++;
+    }
+
+    return count;
 }
