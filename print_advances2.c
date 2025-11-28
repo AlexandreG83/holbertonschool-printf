@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * print_pointer - Prints a pointer address
  * @args: va_list containing the pointer
@@ -19,7 +20,7 @@ int print_pointer(va_list args)
 	if (address == 0)
 		return (count + _putchar('0'));
 	if (ptr == NULL)
-	  return (-1);
+	  return(_printf("%p", ptr));
 	while (address > 0)
 	{
 		hex[i] = address % 16;
