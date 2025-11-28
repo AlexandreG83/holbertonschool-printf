@@ -14,6 +14,7 @@ int (*get_format_func(char c))(va_list)
 		{'%', print_percent},
 		{'d', print_int},
 		{'i', print_int},
+		{'b', print_binary},
 		{'\0', NULL}
 	};
 	int i = 0;
