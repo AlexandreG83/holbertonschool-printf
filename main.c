@@ -41,5 +41,6 @@ int main(void)
     _printf("Unknown:[%r]\n");
     printf("Unknown:[%r]\n");
     _printf("Binary: [%b]\n", 98);
+    _printf("%u", 1024);
     return (0);
 }
