@@ -19,7 +19,7 @@ int print_pointer(va_list args)
 	if (address == 0)
 		return (count + _putchar('0'));
 	if (ptr == NULL)
-	  return (NULL);
+	  return (-1);
 	while (address > 0)
 	{
 		hex[i] = address % 16;
