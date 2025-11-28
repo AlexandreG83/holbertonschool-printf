@@ -19,6 +19,7 @@ int (*get_format_func(char c))(va_list)
 		{'o', print_octal},
 		{'x', print_hex},
 		{'X', print_hex_upper},
+		{'p', print_pointer},
 		{'\0', NULL}
 	};
 	int i = 0;
